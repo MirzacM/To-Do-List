@@ -1,0 +1,174 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:300,400,500,700,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", "Ubuntu" serif;
+}
+
+body {
+  height: 100vh;
+  margin: 0;
+  --x: calc(var(--posX, 0) * 1px);
+  --y: calc(var(--posY, 0) * 1px);
+  background-image: linear-gradient(115deg, rgb(211 255 215), rgb(0 0 0)),
+    radial-gradient(
+      90% 100% at calc(50% + var(--x)) calc(0% + var(--y)),
+      rgb(200 200 200),
+      rgb(022 000 045)
+    ),
+    radial-gradient(
+      100% 100% at calc(80% - var(--x)) calc(0% - var(--y)),
+      rgb(250 255 000),
+      rgb(036 000 000)
+    ),
+    radial-gradient(
+      150% 210% at calc(100% + var(--x)) calc(0% + var(--y)),
+      rgb(020 175 125),
+      rgb(000 010 255)
+    ),
+    radial-gradient(
+      100% 100% at calc(100% - var(--x)) calc(30% - var(--y)),
+      rgb(255 077 000),
+      rgb(000 200 255)
+    ),
+    linear-gradient(60deg, rgb(255 000 000), rgb(120 086 255));
+  background-blend-mode: overlay, overlay, difference, difference, difference,
+    normal;
+}
+
+/* container title */
+
+.container-title {
+  padding: 10em 5em 1em 5em;
+  font-size: 25px;
+  font-family: 'Poppins',sans-serif;
+  text-align: center;
+  margin: 0 0 30px 0;
+  color: white;
+  text-shadow: 3px 1px black;
+}
+
+/* container */
+
+.inputcol {
+  display: grid;
+  column-gap: 5px;
+  grid-template-columns: 60% 10%;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.textarea {
+  min-height: 50px;
+  height: 50px;
+  max-width: 100%;
+  min-width: 100%;
+  border-radius: 10px;
+  border-color: #333;
+  font-size: 20px;
+  font-family: 'Ubuntu',sans-serif;
+  padding: 10px 10px;
+  overflow: auto;
+  overflow-x: hidden;
+}
+
+.textarea::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: #333;
+}
+
+.textarea::-webkit-scrollbar {
+  width: 10px;
+  cursor: pointer;
+}
+
+.textarea::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #8f8acc;
+  cursor: pointer;
+}
+
+.textarea:focus {
+  outline: none;
+}
+
+.buttoninput {
+  padding: 5px 50px;
+  border-radius: 10px;
+  border-color: #333;
+  background-color: white;
+  font-size: 20px;
+}
+
+.buttoninput:hover {
+  background-color: #8f8acc;
+  color: white;
+}
+
+/* js */
+
+.todolist {
+  margin-top: 20px;
+}
+
+.itemall {
+  display: grid;
+  grid-template-columns: 60% 5% 5%;
+  justify-content: center;
+  margin-bottom: 2px;
+}
+
+.item,
+.check-button,
+.trash-button {
+  border: none;
+  background-color: white;
+  min-height: 50px;
+  padding: 10px 10px;
+}
+
+.item {
+  word-wrap: break-word;
+  word-break: break-all;
+  border-radius: 10px 0 0 10px;
+  display: grid;
+  align-content: center;
+  font-size: 20px;
+}
+
+.check-button,
+.trash-button {
+  font-size: 15px;
+}
+
+.trash-button {
+  border-radius: 0 10px 10px 0;
+}
+
+.check-button:hover {
+  background-color: #37b3cc;
+  color: white;
+}
+
+.trash-button:hover {
+  background-color: #6b73c1;
+  color: white;
+}
+
+.checklist {
+  text-decoration: line-through;
+}
+
+.fa-check,
+.fa-trash {
+  pointer-events: none;
+}
+
+button,
+.check-button,
+.trash-button {
+  cursor: pointer;
+}
